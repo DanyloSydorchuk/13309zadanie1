@@ -1,0 +1,10 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model _13309zadanie1.Models.Plyty
+<h1>Zamówiłeś płytę meblową</h1>
+<p>Zamówiłeś @Model.Ilosc płyt rozmiarem @Model.Wysokosc x @Model.Szerokosc</p>
+<a asp-controller="Plyty" asp-action="FindAll">Zobacz liste płyt</a>
+<a asp-controller="Plyty" asp-action="Add">Dodaj jeszcze płytę</a>

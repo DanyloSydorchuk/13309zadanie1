@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model _13309zadanie1.Models.Plyty
+
+<div class="container-fluid" m-3>
+    <h2>Wpisz dane do zamówienia płyty</h2>
+    <form asp-controller="Plyty" asp-action="Add" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="mb-3">
+            <span asp-validation-for="Szerokosc" class="text-danger"></span>
+            <label asp-for="Szerokosc">Szerokość płyty w mm</label>
+            <input class="form-control" asp-for="Szerokosc" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Wysokosc" class="text-danger"></span>
+            <label asp-for="Wysokosc">Wysokość płyty w mm</label>
+            <input class="form-control" asp-for="Wysokosc" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Cena" class="text-danger"></span>
+            <label asp-for="Cena">Cena za 1 m^2</label>
+            <input class="form-control" asp-for="Cena" />
+        </div>
+        <div class="mb-3">
+            <span asp-validation-for="Ilosc" class="text-danger"></span>
+            <label asp-for="Ilosc">Liczba w szt</label>
+            <input class="form-control" asp-for="Ilosc" />
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Zapisz</button>
+        </div>
+    </form>
+</div>

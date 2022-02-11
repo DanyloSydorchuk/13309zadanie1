@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+
+    decimal pole = 0;
+    decimal cena = 0;
+    decimal szerokosc = 0;
+    decimal wysokosc = 0;
+}
+@model ICollection<_13309zadanie1.Models.Plyty>
+<div class="container-fluid m-3">
+    <h2>Zamówienie</h2>
+    <table class="table">
+        <tr>
+            <td>Rozmiar</td>
+            <td>Ilość sztuk</td>
+            <td>Cena za całość</td>
+        </tr>
+        @foreach (var plyty in Model)
+        {
+            szerokosc = plyty.Szerokosc * 0.001M;
+            wysokosc = plyty.Wysokosc * 0.001M;
+            pole = szerokosc * wysokosc;
+            cena = pole * plyty.Ilosc * plyty.Cena;
+            <tr>
+                
+                <td>
+                    @plyty.Szerokosc x @plyty.Wysokosc
+                </td>
+            
+                
+                <td>
+                    @plyty.Ilosc
+                </td>
+            
+                
+                <td>
+                    @cena.ToString("#,##0.##") zł
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
